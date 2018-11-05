@@ -1,0 +1,35 @@
+
+
+
+<div class="welcome">
+	<h1>Welcome to the Club</h1>
+</div>
+
+	<% if user_signed_in? %>
+		<h2> Hello, <%= current_user.first_name %> </h2>
+
+
+	<div class="welcome-container">
+
+<p><%= link_to "Club Member Listing", users_path,  class: 'btn btn-treehouse2' %></p>
+<p><%= link_to "Edit Profile", edit_user_registration_path,  class: 'btn btn-treehouse2' %></p>
+<p><%= link_to "View Profile", user_path(current_user), class: 'btn btn-treehouse2'  %></p>
+<p><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-treehouse3' %></p>
+</div>
+
+
+	<% else %>
+
+	<h2>The Club content is only visible for members.</h2>
+
+<div class="welcome-container">
+
+<p><%= link_to "Create Account", new_user_registration_path, class: 'btn btn-treehouse3' %></p>
+<p><%= link_to "Sign In", new_user_session_path,  class: 'btn btn-treehouse' %></p>
+</div>
+
+	<% end %>
+
+
+
+

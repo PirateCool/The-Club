@@ -1,0 +1,54 @@
+
+
+<% if user_signed_in? %>
+
+<div class="page-header">
+    <span class="glyphicon glyphicon-plus"></span>
+  <h1>Listing Users</h1>
+</div>
+
+<div class="table-responsive">
+
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Articles</th>
+        <th></th>
+        <th></th>
+        <th></th>
+
+      </tr>
+            <% @users.each do |user| %>
+
+    </thead>
+
+    <tbody>
+            <td><%= user.first_name %></td>
+            <td><%= user.last_name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.articles.count %></td>
+            <td><%= link_to 'Show', user_path(user) %></td>
+        <td><%= link_to 'Edit', edit_user_registration_path(user) %></td>
+        <td><%= link_to 'Destroy', user_registration_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<% else %> 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p> This content is only visible for registered members </p>
+<p> <%= link_to "Register", new_user_registration_path %> or <%= link_to "Login", new_user_session_path %></p>
+<% end %>

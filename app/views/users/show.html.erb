@@ -1,0 +1,32 @@
+<div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+
+	 <h1>User:</h1>
+            <p>First name: <%= @user.first_name %></p>
+           	<p>Last name: <%= @user.last_name %></p>
+            <p>Email : <%= @user.email %></p>
+
+		
+	<h2>
+		My articles:
+	</h2>
+
+		<% if @user.articles.count == 0 %>
+		<p> You don't have any article yet, <%= link_to "Write one Now", new_article_path %></p>
+			<% else %>
+		<% @user.articles.each do |article| %>
+		<p> ----------------------------</p>
+		<p>Title: <%= article.title %> </p>
+	 	<p>Content: <%= article.content %></p>
+	 	<p> ----------------------------</p>
+	 	<br>
+		<% end %>
+		<% end %>
+
+
+</div>

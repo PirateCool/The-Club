@@ -1,0 +1,62 @@
+.welcome-container {
+	display: flex;
+}
+
+
+.welcome {
+	margin-bottom: 120px;
+}
+
+
+.btn-treehouse {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #6AD58B;
+  transition: background 0.3s ease;
+}
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
+
+
+.btn-treehouse2 {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #5e9bf4;
+  transition: background 0.3s ease;
+}
+.btn-treehouse:hover2 {
+  opacity: 1;
+  background: #3372cc;
+  text-decoration: none;
+  color: white;
+}
+
+
+.btn-treehouse3 {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #ef757b;
+  transition: background 0.3s ease;
+}
+.btn-treehouse:hover3 {
+  opacity: 1;
+  background: #e2212c;
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+	margin: 10px;
+}
+
+
