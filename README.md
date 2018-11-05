@@ -19,7 +19,6 @@ with RuneFire32 (Git & Slack)
 pg
 
 * Overview
-
 You need to be a User to access the webiste
 User can write articles and edit their profils
 You can't sign in with invalid parameters
